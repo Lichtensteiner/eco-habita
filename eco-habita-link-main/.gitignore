@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.git
+
+# Subdirectories with git repos
+*/*/.git
+-eco-habita-link-main/
 
 # Editor directories and files
 .vscode/*

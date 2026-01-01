@@ -39,11 +39,11 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 ## 🚀 Stack Technologique
 
 ### Frontend
-- **React 18** - Bibliothèque UI
-- **TypeScript** - Type-safety
-- **Vite** - Build tool ultra-rapide
+- **React 18** - Bibliothèque UI moderne
+- **TypeScript** - Type-safety et meilleure expérience développeur
+- **Vite** - Build tool ultra-rapide et léger
 - **Tailwind CSS** - Framework CSS utilitaire
-- **Shadcn UI** - Composants UI accessibles
+- **Shadcn UI** - Composants UI accessibles et customisables
 - **Radix UI** - Primitives UI de bas niveau
 
 ### Backend & Database
@@ -51,17 +51,17 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 - **PostgreSQL** - Base de données relationnelle
 
 ### Outils & Librairies
-- **React Router** - Navigation
-- **React Hook Form** - Gestion des formulaires
+- **React Router** - Navigation et routing
+- **React Hook Form** - Gestion optimisée des formulaires
 - **TanStack Query** - State management asynchrone
-- **Lucide React** - Icônes
-- **Sonner** - Notifications toast
-- **Zod** - Validation de schémas
-- **Date-fns** - Utilitaires de date
+- **Lucide React** - Icônes vectorielles
+- **Sonner** - Notifications toast élégantes
+- **Zod** - Validation de schémas TypeScript-first
+- **Date-fns** - Utilitaires de date modernes
 
 ### Development
-- **ESLint** - Linting
-- **Bun** - Package manager (alternative à npm)
+- **ESLint** - Linting du code
+- **Bun** - Package manager ultra-rapide (alternative à npm)
 - **PostCSS** - Processeur CSS
 
 ---
@@ -73,8 +73,9 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 - ✅ Dashboard interactif avec statistiques
 - ✅ Gestion des sections eau, déchets, services
 - ✅ Dialogues de commande et abonnement
-- ✅ Navigation intuituve
-- ✅ Composants réutilisables
+- ✅ Navigation intuitive et fluide
+- ✅ Composants réutilisables et maintenables
+- ✅ Design moderne avec Tailwind CSS
 
 ---
 
@@ -82,8 +83,8 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 
 ### Prérequis
 - **Node.js** ≥ 18.0.0
-- **npm** ou **bun**
-- Un compte **Supabase**
+- **npm** ≥ 9.0.0 (ou **bun**)
+- Un compte **Supabase** (optionnel, pour les fonctionnalités backend)
 
 ### Étapes
 
@@ -96,7 +97,7 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 2. **Installer les dépendances**
    ```bash
    npm install
-   # ou avec bun
+   # ou avec bun (plus rapide)
    bun install
    ```
 
@@ -105,10 +106,10 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
    cp .env.example .env.local
    ```
 
-   Remplissez les variables Supabase :
+   Remplissez les variables Supabase dans `.env.local` :
    ```env
-   VITE_SUPABASE_URL=votre_url_supabase
-   VITE_SUPABASE_ANON_KEY=votre_cle_anonyme
+   VITE_SUPABASE_URL=https://your-project.supabase.co
+   VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
    ```
 
 ---
@@ -119,13 +120,13 @@ Eco Habita Link est une application web progressive conçue pour sensibiliser et
 ```bash
 npm run dev
 ```
-
-L'application s'ouvrira sur `http://localhost:5173`
+L'application s'ouvrira automatiquement sur `http://localhost:5173`
 
 ### Build pour la production
 ```bash
 npm run build
 ```
+Génère un build optimisé dans le dossier `dist/`.
 
 ### Aperçu de la build
 ```bash
@@ -153,14 +154,20 @@ eco-habita/
 ├── public/              # Assets statiques
 │   ├── favicon.ico
 │   ├── logo.png
+│   ├── placeholder.svg
 │   └── robots.txt
 ├── src/
 │   ├── components/      # Composants React réutilisables
-│   │   ├── ui/         # Composants Shadcn UI
+│   │   ├── ui/         # Composants Shadcn UI (50+ composants)
 │   │   ├── Header.tsx
 │   │   ├── Footer.tsx
+│   │   ├── HeroSection.tsx
 │   │   ├── LoginDialog.tsx
-│   │   └── ...
+│   │   ├── OrderDialog.tsx
+│   │   ├── SubscriptionDialog.tsx
+│   │   ├── WaterSection.tsx
+│   │   ├── WasteSection.tsx
+│   │   └── ServicesSection.tsx
 │   ├── pages/          # Pages principales
 │   │   ├── Index.tsx
 │   │   ├── Profile.tsx
@@ -198,7 +205,7 @@ eco-habita/
 1. Créez un projet sur [supabase.com](https://supabase.com)
 2. Récupérez votre `Project URL` et `Anon Key`
 3. Configurez votre fichier `.env.local`
-4. Exécutez les migrations :
+4. Exécutez les migrations (optionnel) :
    ```bash
    supabase db push
    ```
@@ -222,11 +229,6 @@ Configuration dans `eslint.config.js`
 3. Configurez les variables d'environnement
 4. Vercel déploiera automatiquement
 
-```bash
-# Ou déployez localement
-npm run build
-```
-
 ### Sur Netlify
 
 ```bash
@@ -242,7 +244,7 @@ Les contributions sont les bienvenues ! Voici comment :
 
 1. **Fork** le repository
 2. Créez une branche (`git checkout -b feature/amazing-feature`)
-3. Commitez vos changements (`git commit -m 'Add amazing feature'`)
+3. Commitez vos changements (`git commit -m 'feat: Add amazing feature'`)
 4. Poussez la branche (`git push origin feature/amazing-feature`)
 5. Ouvrez une **Pull Request**
 
@@ -280,57 +282,3 @@ Ce projet est sous license MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ---
 
 **Made with ❤️ for a sustainable future** 🌍
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
